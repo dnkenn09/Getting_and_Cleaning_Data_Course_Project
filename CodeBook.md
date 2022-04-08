@@ -1,11 +1,14 @@
-#CodeBook
+CodeBook
 
 Author: Dereck Kennedy
+
 =====================================================
+
 This code book details the tasks accomplished by the run_analysis.R script to fulfill requirements for the Coursera: Getting and Cleaning Data.
 It is separated into two sections.
 
 =====================================================
+
 Section 1: Preparatory Actions
 
  - The 'tidyr' and 'dplyr' packages were initialized to allow use of required functions.
@@ -27,11 +30,13 @@ Section 1: Preparatory Actions
   - Created matching column names for test and training data frames to ensure successful merger in the next step.
 
 =====================================================
+
 Section 2: Project Requirements
 
 The project included five specific requirements. Each was executed via a block of code.
 
 -----------------------------------------------------
+
 Requirement #1: Merges the training and the test sets to create one data set
 
   - Used the 'cbind' function to combine the subject, y, and x_train data frames.
@@ -41,16 +46,19 @@ Requirement #1: Merges the training and the test sets to create one data set
   - Used the 'rbind' function to combine the test and training data frames.
 
 -----------------------------------------------------
+
 Requirement #2: Extracts only the measurements on the mean and standard deviation for each measurement
 
   - Used the 'select' function to only retain the 'subject' and 'activity' columns along with all other columns containing 'mean' or 'std'.
 
 -----------------------------------------------------
+
 Requirement #3: Uses descriptive activity names to name the activities in the data set
 
   - Assigned the associated activity name from the 'activities' data frame to the corresponding number.
 
 -----------------------------------------------------
+
 Requirement #4: Appropriately labels the data set with descriptive variable names
 
   - Used descriptions in the 'features_info.txt' file and 'gsub' function to substitute easier to understand descriptions for current column titles.
@@ -75,6 +83,7 @@ Requirement #4: Appropriately labels the data set with descriptive variable name
   - Renamed the column names for the 'total_data' data frame with adjusted names data frame.
 
 -----------------------------------------------------
+
 Requirement #5: Create a second, independent tidy data set with the average of each variable for each activity and each subject
 
   - Created a copy of the 'total data' data frame called 'summ_data'.
